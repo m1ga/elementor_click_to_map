@@ -8,7 +8,7 @@
  * @license           GPL-2.0-or-later
  *
  * @wordpress-plugin
- * Plugin Name:       Elementor - Click to map
+ * Plugin Name:       Click to map for Elementor
  * Plugin URI:        https://github.com/m1ga/elementor_click_to_map
  * Description:       Elementor control that opens Google Map iframe after clicking accept.
  * Version:           1.0.0
