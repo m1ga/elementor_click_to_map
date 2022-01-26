@@ -9,7 +9,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Elementor - Click to map
- * Plugin URI:        https://www.migaweb.de/
+ * Plugin URI:        https://github.com/m1ga/elementor_click_to_map
  * Description:       Elementor control that opens Google Map iframe after clicking accept.
  * Version:           1.0.0
  * Requires at least: 5.2
@@ -18,7 +18,7 @@
  * Author URI:        https://www.migaweb.de/
  * License:           GPL v2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Update URI:        https://www.migaweb.de/
+ * Update URI:        https://github.com/m1ga/elementor_click_to_map
  */
 
 add_action('wp_enqueue_scripts', 'enqueue_click_to_map_scripts');
