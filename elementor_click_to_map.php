@@ -21,14 +21,14 @@
  * Update URI:        https://github.com/m1ga/elementor_click_to_map
  */
 
-add_action('wp_enqueue_scripts', 'enqueue_click_to_map_scripts');
+add_action('wp_enqueue_scripts', 'ctmfe_scripts');
 
-function enqueue_click_to_map_scripts()
+function ctmfe_scripts()
 {
-    wp_register_style('click_to_map_styles', plugins_url('styles/main.css', __FILE__));
-    wp_enqueue_style('click_to_map_styles');
-    wp_register_script('click_to_map_script', plugins_url('scripts/main.js', __FILE__), '', '', true);
-    wp_enqueue_script('click_to_map_script');
+    wp_register_style('ctmfe_styles', plugins_url('styles/main.css', __FILE__));
+    wp_enqueue_style('ctmfe_styles');
+    wp_register_script('ctmfe_script', plugins_url('scripts/main.js', __FILE__), '', '', true);
+    wp_enqueue_script('ctmfe_script');
 }
 
 use Elementor\Plugin;
@@ -38,5 +38,5 @@ add_action('init', static function () {
         return false;
     }
     require_once(__DIR__ . '/widget/click_to_map.php');
-    \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new \Elementor_Widget_Click_To_Map());
+    \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new \CTMFE_Widget());
 });
