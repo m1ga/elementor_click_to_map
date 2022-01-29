@@ -226,13 +226,13 @@ class CTMFE_Widget extends \Elementor\Widget_Base
     {
         $isEditor = \Elementor\Plugin::$instance->editor->is_edit_mode();
         $settings = $this->get_settings_for_display();
-        $url = esc_url($settings['website_link']['url']);
-        $text = esc_html($settings['widget_text']);
-        $buttonText = esc_attr($settings['widget_button_text']);
+        $url = $settings['website_link']['url'];
+        $text = $settings['widget_text'];
+        $buttonText = $settings['widget_button_text'];
 
         echo '<div class="click__map">';
-        echo '<iframe src="" data-url="'.$url.'" style="border:0;" allowfullscreen="" loading="lazy"></iframe>';
-        echo '<div class="click__map__text"><div class="click__map__text__content"><p>'.$text.'</p><button onclick="ctmfeAccept();">'.$buttonText.'</button></div></div>';
+        echo '<iframe src="" data-url="'.esc_url($url).'" style="border:0;" allowfullscreen="" loading="lazy"></iframe>';
+        echo '<div class="click__map__text"><div class="click__map__text__content"><p>'.esc_html($text).'</p><button onclick="ctmfeAccept();">'.esc_attr($buttonText).'</button></div></div>';
         echo '</div>';
     }
 
